@@ -1,0 +1,7 @@
+name: KD
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - python=3.7.8
+  - pytorch==1.6.0
