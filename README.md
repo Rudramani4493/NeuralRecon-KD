@@ -15,8 +15,8 @@ from distillation.hintonDistiller import HintonDistiller
 from distillation.utils import MLP, PseudoDataset
 
 # Initialize random models and distiller
-student = MLP(100, 10, 256)
-teacher = MLP(100, 10, 256)
+student = NeuralReconStudent('cfg')
+teacher = NeuralReconTeacher('cfg')
 distiller = HintonDistiller(alpha=0.5, studentLayer=-2, teacherLayer=-2)
 
 # Initialize objectives and optimizer
@@ -25,10 +25,7 @@ distillObjective = nn.KLDivLoss(reduction='batchmean')
 optimizer = torch.optim.SGD(student.parameters(), lr=0.1)
 
 # Pseudo dataset and dataloader 
-trainloader = torch.utils.data.DataLoader(
-    PseudoDataset(size=(100)),
-    batch_size=512,
-    shuffle=True)
+trainloader = torch.utils.data.DataLoader(''' Yet to be added for scannet ''')
 
 # Load state if checkpoint is provided
 checkpoint = None
