@@ -18,7 +18,7 @@
 import torch
 import torch.nn as nn
 from distillation.hintonDistiller import HintonDistiller
-from distillation.utils import MLP, PseudoDataset
+''' We need to add the NeuralReconTeacher and NeuralReconStudent to distillattion.utils '''
 
 # Initialize random models and distiller
 student = NeuralReconStudent('cfg')
