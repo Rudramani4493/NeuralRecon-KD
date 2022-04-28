@@ -11,6 +11,7 @@ from NeuralRecon-Student.models import NeuralReconTeacher
 from NeuralRecon-Teacher.models import NeuralReconStudent
 from distillation import cfg, update_cfg
 from distillation import transforms, find_dataset_def
+from distillation.sampler import DistributedSampler
 
 # Initialize random models and distiller
 student = NeuralReconStudent(cfg)
