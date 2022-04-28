@@ -10,7 +10,7 @@ from distillation.utils import MLP, PseudoDataset
 from NeuralRecon-Student.models import NeuralReconTeacher
 from NeuralRecon-Teacher.models import NeuralReconStudent
 from distillation import cfg, update_cfg
-from datasets import transforms, find_dataset_def
+from distillation import transforms, find_dataset_def
 
 # Initialize random models and distiller
 student = NeuralReconStudent(cfg)
