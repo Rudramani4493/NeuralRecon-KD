@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-python main.py --cfg ./config/test.yaml
+python main.py --cfg ./distillation/test.yaml
